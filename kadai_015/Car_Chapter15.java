@@ -5,7 +5,7 @@ public class Car_Chapter15 {
 	private int gear = 1;
 	private int speed = 10;
 	
-	public Car_Chapter15(int gear, int speed) {
+	public Car_Chapter15() {
 		this.gear = gear;
 		this.speed = speed;
 	}
@@ -14,15 +14,9 @@ public class Car_Chapter15 {
 		int beforeGear = this.gear;
 		this.gear = afterGear;
 		
-		if (afterGear > 5 || afterGear < 1 ) {
-			System.out.println("ギア数無効");
-			return;
-		}
 		
 		System.out.println("ギア" + beforeGear + "から" + this.gear + "に切り替えました");
-	}
-	
-	public void run() {
+		
 		switch (this.gear) {
 		case 1:
 			this.speed = 10;
@@ -44,6 +38,11 @@ public class Car_Chapter15 {
 			this.speed = 10;
 			break;
 		}
+		
+	}
+	
+	public void run() {
+		
 		System.out.println("速度は時速" + this.speed + "kmです");
 	}
 		
